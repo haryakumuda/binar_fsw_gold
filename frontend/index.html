@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piggy Bank Account</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./assets/logo.png" type="image/png" />
+  </head>
+  <body class="index-body">
+    <div class="header">
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo" />
+      </div>
+      <div class="title">
+        <h1>Piggy Bank Account</h1>
+        <p>Track Your Money!</p>
+      </div>
+      <div class="profile-picture">
+        <img src="./assets/nezuko.jpg" alt="Profile Picture" />
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <a class="sidebar-item" id="transaction" href="index.html">
+        <img src="./assets/transaction.png" alt="transaction" />
+        <div>&nbsp;Transaction</div>
+      </a>
+      <a class="sidebar-item" id="stats" href="stats.html">
+        <img src="./assets/stats.png" alt="stats" />
+        <div>&nbsp;Stats</div>
+      </a>
+      <a class="sidebar-item" id="accounts" href="accounts.html">
+        <img src="./assets/accounts.png" alt="accounts" />
+        <div>&nbsp;Accounts</div>
+      </a>
+      <a class="sidebar-item" id="more" href="more.html">
+        <img src="./assets/more.png" alt="more" />
+        <div>&nbsp;More</div>
+      </a>
+    </div>
+
+    <div id="insert-form">
+      <input id="datetime" type="datetime-local" placeholder="Date and Time" />
+      <input id="category" type="text" placeholder="Category" />
+      <input id="payment_type" type="text" placeholder="Payment Type" />
+      <input id="amount" type="number" placeholder="Amount" />
+      <input id="payment_provider" type="text" placeholder="Payment Provider" />
+      <input id="detail" type="text" placeholder="Detail" />
+      <button id="insert-button">Insert</button>
+    </div>
+
+    <div id="content">
+      <!-- Existing transaction data will be displayed here -->
+    </div>
+
+    <script src="transaction.js"></script>
+  </body>
+</html>

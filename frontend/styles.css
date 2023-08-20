@@ -1,0 +1,253 @@
+/* Reset some default margin and padding */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: pink;
+  padding: 10px;
+}
+
+.logo {
+  flex: 0 0 50px;
+  margin-right: 5px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title p {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 150px;
+  background-color: #333;
+  color: #fff;
+  float: left;
+  height: 100vh;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  background-color: plum;
+  height: 50px; /* Set the height of each item */
+  margin: 10px 0; /* Vertical margin of 5px, no horizontal margin */
+  display: flex;
+  align-items: center;
+  flex: 0 0 50px;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 10px;
+}
+
+/* Remove underline and change color for links */
+a.sidebar-item {
+  text-decoration: none;
+  color: black; /* or your preferred color */
+}
+/* Apply styles for links when hovered */
+a.sidebar-item:hover {
+  color: white; /* or your preferred color when hovering */
+}
+
+.index-body #transaction,
+.stats-body #stats,
+.accounts-body #accounts,
+.more-body #more {
+  background-color: pink;
+}
+
+/* Additional style for the image inside #transaction */
+#transaction img,
+#stats img,
+#accounts img,
+#more img {
+  max-height: 100%; /* Ensure the image fits the height of the flexbox */
+  max-width: 40px;
+  object-fit: contain; /* Resize while maintaining aspect ratio */
+}
+
+/* Content styles */
+.content {
+  padding-left: 100px;
+  margin-left: 250px;
+  padding: 20px;
+}
+
+/* User Card styles */
+.user-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-email {
+  color: #888;
+}
+
+/* Media queries for responsive font sizes */
+@media screen and (max-width: 768px) {
+  .title h1 {
+    font-size: 20px;
+  }
+
+  .title p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title h1 {
+    font-size: 16px;
+  }
+
+  .title p {
+    font-size: 12px;
+  }
+}
+
+/* Profile picture styles */
+.profile-picture {
+  flex: 0 0 50px;
+  margin-left: 10px;
+}
+
+.profile-picture img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+.transaction-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+/* Left column */
+.transaction-datetime,
+.transaction-category {
+  flex: 1;
+  align-self: center;
+}
+
+/* Middle column */
+.transaction-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+/* Right column */
+.transaction-amount {
+  flex: 1;
+  align-self: center;
+  text-align: right;
+}
+
+/* Edit Delete Column */
+.transaction-option {
+  flex: 0 0 10px; /* Set width and height to 10px */
+  display: flex;
+  flex-direction: row; /* Stack sub-options horizontally */
+  justify-content: center; /* Center sub-options horizontally */
+  align-items: center; /* Center sub-options vertically */
+  padding: 0 5px; /* Add some padding for visual separation */
+}
+
+/* Styling for the headings and data in the card */
+.transaction-detail {
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
+}
+
+.transaction-payment {
+  margin: 5px 0;
+  flex: 1;
+}
+.transaction-edit,
+.transaction-delete {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-edit {
+  background-color: rgb(255, 209, 123);
+}
+
+.transaction-delete {
+  background-color: rgb(255, 151, 151);
+}
+.transaction-edit:hover {
+  background-color: orange; /* Change to the desired color */
+}
+
+.transaction-delete:hover {
+  background-color: red; /* Change to the desired color */
+}
+
+.transaction-edit img,
+.transaction-delete img {
+  max-width: 100%; /* Ensure the image fits within the icon */
+  max-height: 100%; /* Ensure the image fits within the icon */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .transaction-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
